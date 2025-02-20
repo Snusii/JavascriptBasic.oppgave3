@@ -88,7 +88,9 @@ const people = [
 ];
 let combinedAge = 0;
 
-// Skriv koden for oppgave 1 her
+for (i = 0; i < people.length; i++); {
+	if (i)
+}
 
 let averageAge = 0;
 
