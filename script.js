@@ -88,9 +88,13 @@ const people = [
 ];
 let combinedAge = 0;
 
-for (i = 0; i < people.length; i++); {
-	if (i)
+for (i = 0; i < people.length; i++) {
+	if (people[i].name === "Otto") {
+		continue;
+	}
 }
+
+console.log(people[i])
 
 let averageAge = 0;
 
