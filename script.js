@@ -86,7 +86,7 @@ const people = [
 		hobbies: ["design", "drawing", "css"],
 	}
 ];
-let combinedAge = 0;
+let combinedAge = 0; //	184
 
 for (i = 0; i < people.length; i++) {
 	if (people[i].name === "Otto") {
@@ -95,11 +95,12 @@ for (i = 0; i < people.length; i++) {
 	people[i].city = cities[Math.floor(Math.random() * cities.length)];
 	people[i].title = `${people[i].male ? "Mr." : "Ms."}`;
 	people[i].age += 2;
-	people[i].hobbies.unshift("coding")
+	people[i].hobbies.unshift("coding");
+	combinedAge += people[i].age;
 
 	}
 	
-	console.log(people)
+	console.log(combinedAge)
 
 
 
