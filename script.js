@@ -87,6 +87,7 @@ const people = [
 	}
 ];
 let combinedAge = 0; //	184
+let averageAge = 0;
 
 for (i = 0; i < people.length; i++) {
 	if (people[i].name === "Otto") {
@@ -97,15 +98,11 @@ for (i = 0; i < people.length; i++) {
 	people[i].age += 2;
 	people[i].hobbies.unshift("coding");
 	combinedAge += people[i].age;
+}
 
-	}
-	
-	console.log(combinedAge)
+averageAge = combinedAge / people.length;
 
-
-
-
-let averageAge = 0;
+console.log(averageAge)
 
 /******************************************************************************
 2.
