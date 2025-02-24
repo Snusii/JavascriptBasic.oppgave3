@@ -42,56 +42,48 @@ const people = [
 		male: true,
 		age: 23,
 		hobbies: ["cycling", "football", "pool"],
-		city: cities[Math.floor(Math.random() * cities.length)]
 	},
 	{
 		name: "Susan",
 		male: false,
 		age: 26,
 		hobbies: ["jogging", "travelling", "dancing"],
-		city: cities[Math.floor(Math.random() * cities.length)]
 	},
 	{
 		name: "Monica",
 		male: false,
 		age: 21,
 		hobbies: ["skateboarding", "guitar", "concerts"],
-		city: cities[Math.floor(Math.random() * cities.length)]
 	},
 	{
 		name: "Avery",
 		male: true,
 		age: 28,
 		hobbies: ["writing", "games", "memes"],
-		city: cities[Math.floor(Math.random() * cities.length)]
 	},
 	{
 		name: "Phillip",
 		male: true,
 		age: 24,
 		hobbies: ["boxing", "wrestling", "mma"],
-		city: cities[Math.floor(Math.random() * cities.length)]
 	},
 	{
 		name: "Otto",
 		male: true,
 		age: 36,
 		hobbies: ["movies", "cinema", "music"],
-		city: cities[Math.floor(Math.random() * cities.length)]
 	},
 	{
 		name: "Annabelle",
 		male: false,
 		age: 30,
 		hobbies: ["makeup", "fashion", "shopping"],
-		city: cities[Math.floor(Math.random() * cities.length)]
 	},
 	{
 		name: "Cathy",
 		male: false,
 		age: 18,
 		hobbies: ["design", "drawing", "css"],
-		city: cities[Math.floor(Math.random() * cities.length)]
 	}
 ];
 let combinedAge = 0;
@@ -99,7 +91,11 @@ let combinedAge = 0;
 for (i = 0; i < people.length; i++) {
 	if (people[i].name === "Otto") {
 		continue;
-		}
+	}
+	people[i].city = cities[Math.floor(Math.random() * cities.length)];
+	people[i].title = `${people[i].male ? "Mr." : "Ms."}`;
+	people[i].age += 2;
+	
 	}
 	
 	console.log(people)
