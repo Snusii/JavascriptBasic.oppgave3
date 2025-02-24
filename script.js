@@ -95,7 +95,8 @@ for (i = 0; i < people.length; i++) {
 	people[i].city = cities[Math.floor(Math.random() * cities.length)];
 	people[i].title = `${people[i].male ? "Mr." : "Ms."}`;
 	people[i].age += 2;
-	
+	people[i].hobbies.unshift("coding")
+
 	}
 	
 	console.log(people)
