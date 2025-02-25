@@ -123,25 +123,18 @@ diceRoller(5, 20) skal returnere et array med 5 tilfeldige tall fra 1-20.
 
 ******************************************************************************/
 
-function diceRoller (inNumber) {
+function diceRoller (inNumber, inSide) {
 	const diceArr = [];
+
 	for (let i = 0; i < inNumber; i++) {
-		diceArr[i] = Math.floor(Math.random() * 6) + 1;
+		diceArr[i] = Math.floor(Math.random() * inSide) + 1;
 	}
 
 	return diceArr;
-
-	
-
-
-
 }
 
+console.log(diceRoller(4, 6));
 
-
-diceRoller(4);
-diceRoller(6);
-diceRoller(1000);
 /******************************************************************************
 3.
 
