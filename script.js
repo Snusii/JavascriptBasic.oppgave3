@@ -211,8 +211,6 @@ skal returnere "whao is ohe ptino tf ohis?"
 
 ******************************************************************************/
 
-
-
 function doubleSwap(string, charA, charB) {
 
 	let swappedText = ""
@@ -276,4 +274,47 @@ const greetings = [
   "Good afternoon gentlemen!"
 ];
 
-// Skriv koden for oppgave 5 her
+for (let i = 0; i < greetings.length; i++) {
+	helloChecker(greetings[i]); 
+}
+
+
+function helloChecker (inText) {
+
+	const posibilities = [
+	{
+		regx : /Hello/i,
+		svar : "HELLO, oppdaget på Engelsk"
+	},
+	{
+		regx : /ciao/i,
+		svar : "CIAO, oppdaget på Italiensk"
+	},
+	{
+		regx  : /salut/i,
+		answer: "SALUT, oppdaget på Fransk"
+	},
+	{
+		regx  : /hallo/i,
+		answer: "HALLO, oppdaget på Tysk"
+	},
+	{
+		regx  : /hola/i,
+		answer: "HOLA, oppdaget på Spansk"
+	},
+	{
+		regx  : /cześć/i,
+		answer: "CZESC, oppdaget på Polsk"
+	}
+	];
+
+	for (const posibility of posibilities) {
+		if(inText.match(posibility.regx)) {
+				
+			console.log(inText)
+			console.log(posibility.answer)
+		}
+	}
+}
+
+
