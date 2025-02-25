@@ -87,8 +87,9 @@ const people = [
 	}
 ];
 let combinedAge = 0; //	184
-let averageAge = 0;
+let averageAge = 0; // 23
 
+// Looping through the people array
 for (i = 0; i < people.length; i++) {
 	if (people[i].name === "Otto") {
 		continue;
@@ -101,8 +102,6 @@ for (i = 0; i < people.length; i++) {
 }
 
 averageAge = combinedAge / people.length;
-
-console.log(averageAge)
 
 /******************************************************************************
 2.
@@ -124,8 +123,25 @@ diceRoller(5, 20) skal returnere et array med 5 tilfeldige tall fra 1-20.
 
 ******************************************************************************/
 
-// Skriv koden for oppgave 2 her
+function diceRoller (inNumber) {
+	const diceArr = [];
+	for (let i = 0; i < inNumber; i++) {
+		diceArr[i] = Math.floor(Math.random() * 6) + 1;
+	}
 
+	return diceArr;
+
+	
+
+
+
+}
+
+
+
+diceRoller(4);
+diceRoller(6);
+diceRoller(1000);
 /******************************************************************************
 3.
 
