@@ -123,9 +123,10 @@ diceRoller(5, 20) skal returnere et array med 5 tilfeldige tall fra 1-20.
 
 ******************************************************************************/
 
-function diceRoller (inNumber, inSide) {
-	const diceArr = [];
+const diceArr = [];
 
+function diceRoller (inNumber, inSide) {
+	
 	for (let i = 0; i < inNumber; i++) {
 		diceArr[i] = Math.floor(Math.random() * inSide) + 1;
 	}
@@ -133,7 +134,7 @@ function diceRoller (inNumber, inSide) {
 	return diceArr;
 }
 
-console.log(diceRoller(4, 6));
+console.log(diceRoller(5, 20));
 
 /******************************************************************************
 3.
@@ -160,7 +161,30 @@ skal returnere:
 
 ******************************************************************************/
 
-// Skriv koden for oppgave 3 her
+const stringArr = [
+	"hEr ",
+	" er", 
+	"dEt ", 
+	" baRE", 
+	"roT "
+];
+
+function stringCleaned (inArray) {
+
+	let completedText = "";
+
+	for (let text of inArray) {
+	
+		completedText += `${text.trim().toLowerCase()} `;
+
+	}
+
+	return completedText;
+}
+
+//console.log(stringCleaned(stringArr));
+
+
 
 /******************************************************************************
 4.
@@ -187,8 +211,27 @@ skal returnere "whao is ohe ptino tf ohis?"
 
 ******************************************************************************/
 
+
+
 function doubleSwap(string, charA, charB) {
-	// Skriv koden for oppgave 4 her
+
+	let swappedText = ""
+
+	for (let i = 0; i < string.length; i++) {
+		
+		if (string[i] === charA) {
+			swappedText += charB;
+		}
+
+		else if (string[i] === charB) {
+			swappedText += charA;
+		}
+		else {
+			swappedText += string[i];
+		}
+	}
+
+	return swappedText;
 }
 
 /******************************************************************************
