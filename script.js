@@ -137,12 +137,15 @@ diceRoller(5, 20) skal returnere et array med 5 tilfeldige tall fra 1-20.
 // array
 const diceArr = [];
 
-//function with two numbers as parameters
+/////////////
+//Functions
+////////////
+
 function diceRoller (inNumber, inSide) {
 	
-	
+	// Looping through the first number parameter
 	for (let i = 0; i < inNumber; i++) {
-		
+		//dice arr that is looped with the first num parameter, that use methods to connect the other number parameter. +1 just to make it start on 1 and not 0
 		diceArr[i] = Math.floor(Math.random() * inSide) + 1;
 	}
 
@@ -184,16 +187,23 @@ const stringArr = [
 	"roT "
 ];
 
+/////////////
+//Functions
+////////////
+
 function stringCleaned (inArray) {
 
 	let completedText = "";
 
+	// for of loop, looping through array
 	for (let text of inArray) {
-	
+		
+		// completedText +  text index(parameter) with methods
 		completedText += `${text.trim().toLowerCase()} `;
 
 	}
 
+	// return cleaned text (completedText)
 	return completedText;
 }
 
@@ -226,24 +236,35 @@ skal returnere "whao is ohe ptino tf ohis?"
 
 ******************************************************************************/
 
+/////////////
+//Functions
+////////////
+
 function doubleSwap(string, charA, charB) {
 
-	let swappedText = ""
+	let swappedText = "";
 
+	//Looping through the string
 	for (let i = 0; i < string.length; i++) {
 		
+		//if string letter is the same as charA
 		if (string[i] === charA) {
+			// swap letter with charB
 			swappedText += charB;
 		}
 
+		// else if string is the same as charB
 		else if (string[i] === charB) {
+			// swap letter with CharA
 			swappedText += charA;
 		}
+		// else swappedText should be the same as the string originally was
 		else {
 			swappedText += string[i];
 		}
 	}
 
+	//return swappedText
 	return swappedText;
 }
 
@@ -289,16 +310,22 @@ const greetings = [
   "Good afternoon gentlemen!"
 ];
 
+// looping through the greeting arr
 for (let i = 0; i < greetings.length; i++) {
 	helloChecker(greetings[i]); 
 }
 
+/////////////
+//Functions
+////////////
 
 function helloChecker (inText) {
 
 	const posibilities = [
 	{
+		// used regx to validate the word hello for all lang
 		regx   : /Hello/i,
+		//answer back if the word is validatet in a specific lang
 		answer : "HELLO, oppdaget på Engelsk",
 	},
 	{
@@ -323,11 +350,16 @@ function helloChecker (inText) {
 	}
 	];
 
+	// for of loop
 	for (const posibility of posibilities) {
+
+		// if inText match the word inside regX
 		if(inText.match(posibility.regx)) {
-				
-			console.log(inText)
-			console.log(posibility.answer)
+			
+			// do this
+			// console.logs for intext and posibility.answer
+			console.log(inText);
+			console.log(posibility.answer);
 		}
 	}
 }
