@@ -86,22 +86,33 @@ const people = [
 		hobbies: ["design", "drawing", "css"],
 	}
 ];
+
 let combinedAge = 0; //	184
 let averageAge = 0; // 23
 
 // Looping through the people array
 for (i = 0; i < people.length; i++) {
+	// if the name Otto is found in the name key in the people array
 	if (people[i].name === "Otto") {
+		// skip otto
 		continue;
 	}
+	//added city to each object in the array, it takes a random city from the cities array an add to city value. 
 	people[i].city = cities[Math.floor(Math.random() * cities.length)];
+	//added title to each object in the array, if male is true it will give you "Mr." and if false "Ms."
 	people[i].title = `${people[i].male ? "Mr." : "Ms."}`;
+	//age in each object is +2 
 	people[i].age += 2;
+	// add "codeing" to the beginning of the hobbies array in each object
 	people[i].hobbies.unshift("coding");
+	// combinedAge increment the age key of all objects in the people array
 	combinedAge += people[i].age;
 }
 
+//averageAge get the same value as combinedAge divided on the length of the people array 
 averageAge = combinedAge / people.length;
+
+//console.log(people);
 
 /******************************************************************************
 2.
@@ -123,18 +134,22 @@ diceRoller(5, 20) skal returnere et array med 5 tilfeldige tall fra 1-20.
 
 ******************************************************************************/
 
+// array
 const diceArr = [];
 
+//function with two numbers as parameters
 function diceRoller (inNumber, inSide) {
 	
+	
 	for (let i = 0; i < inNumber; i++) {
+		
 		diceArr[i] = Math.floor(Math.random() * inSide) + 1;
 	}
 
 	return diceArr;
 }
 
-console.log(diceRoller(5, 20));
+//console.log(diceRoller(5, 20));
 
 /******************************************************************************
 3.
@@ -283,24 +298,24 @@ function helloChecker (inText) {
 
 	const posibilities = [
 	{
-		regx : /Hello/i,
-		svar : "HELLO, oppdaget på Engelsk"
+		regx   : /Hello/i,
+		answer : "HELLO, oppdaget på Engelsk",
 	},
 	{
-		regx : /ciao/i,
-		svar : "CIAO, oppdaget på Italiensk"
+		regx   : /ciao/i,
+		answer : "CIAO, oppdaget på Italiensk",
 	},
 	{
 		regx  : /salut/i,
-		answer: "SALUT, oppdaget på Fransk"
+		answer: "SALUT, oppdaget på Fransk",
 	},
 	{
 		regx  : /hallo/i,
-		answer: "HALLO, oppdaget på Tysk"
+		answer: "HALLO, oppdaget på Tysk",
 	},
 	{
 		regx  : /hola/i,
-		answer: "HOLA, oppdaget på Spansk"
+		answer: "HOLA, oppdaget på Spansk",
 	},
 	{
 		regx  : /cześć/i,
