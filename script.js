@@ -319,13 +319,15 @@ for (let i = 0; i < greetings.length; i++) {
 //Functions
 ////////////
 
+//function for regx to validate the word hello for all lang and
+//answer back if the word is validatet in a specific lang
 function helloChecker (inText) {
 
 	const posibilities = [
 	{
-		// used regx to validate the word hello for all lang
+		
 		regx   : /Hello/i,
-		//answer back if the word is validatet in a specific lang
+		
 		answer : "HELLO, oppdaget på Engelsk",
 	},
 	{
